@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LMS.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,10 @@ namespace LMS
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            AutomapperConfig.Initialize();
+            AutofacBootstrapper.Run();
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
