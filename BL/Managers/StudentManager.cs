@@ -69,13 +69,16 @@ namespace BL.Managers
             {
                 search.PageSize = 10;
             }
+
+
             var students = _studentRepository.Records.Search(search.SearchValue);
             students = students.ApplySort(search.SortString, search.SortOrder);
 
             var SearchResult = new StudentSearchDto
             {
                 PageSize = search.PageSize,
-                TotalPage = students.Count() / search.PageSize + (students.Count() % search.PageSize == 0 ? 0 : 1)
+                TotalPage = students.Count() / search.PageSize + (students.Count() % search.PageSize == 0 ? 0 : 1),
+                Amount = students.Count()
             };
 
             SearchResult.PageNumber = search.PageNumber > SearchResult.TotalPage ? 1 : search.PageNumber;

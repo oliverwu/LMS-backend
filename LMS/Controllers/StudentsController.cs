@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace LMS.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class StudentsController : ApiController
     {
         private readonly IStudentManager _studentManager;
@@ -36,6 +36,12 @@ namespace LMS.Controllers
             return Ok(students);
         }
 
+        //[HttpGet]
+        //[Route("api/Students/GetAllStudents")]
+        //public IHttpActionResult GetAllStudents()
+        //{
+        //    return Ok(_studentManager.SearchStudentsByName(""));
+        //}
 
 
         [HttpGet]

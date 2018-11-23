@@ -10,7 +10,7 @@ namespace Data.Repositories.Interfaces
 {
     public interface IStudentRepository: IGenericRepository<Student>
     {
-        Student GetStudentByEmail(string email);
+       // Student GetStudentByEmail(string email);
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Model.Dtos;
 using Model.Dtos.Course;
+using Model.Dtos.Lecturer;
 using Model.Models;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,9 @@ namespace LMS.App_Start
                 config.CreateMap<CourseAddDto, Course>();
                 config.CreateMap<Course, CourseDto>();
                 config.CreateMap<CourseUpdateDto, Course>();
+                config.CreateMap<LecturerAddDto, Lecturer>();
+                config.CreateMap<Lecturer, LecturerDto>();
+                config.CreateMap<LecturerUpdateDto, Lecturer>();
                 //config.CreateMap<Course, CourseDto>();
             });
         }

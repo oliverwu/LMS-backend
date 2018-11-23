@@ -52,12 +52,16 @@
     <Compile Include="Dtos\Course\CourseAddDto.cs" />
     <Compile Include="Dtos\Course\CourseDto.cs" />
     <Compile Include="Dtos\Course\CourseUpdateDto.cs" />
-    <Compile Include="Dtos\StudentAddDto.cs" />
-    <Compile Include="Dtos\StudentDto.cs" />
-    <Compile Include="Dtos\StudentSearchDto.cs" />
-    <Compile Include="Dtos\StudentUpdateDto.cs" />
-    <Compile Include="Dtos\UserDisplayDto.cs" />
-    <Compile Include="Dtos\UserRegisterDto.cs" />
+    <Compile Include="Dtos\Lecturer\LecturerAddDto.cs" />
+    <Compile Include="Dtos\Lecturer\LecturerDto.cs" />
+    <Compile Include="Dtos\Lecturer\LecturerSearchDto.cs" />
+    <Compile Include="Dtos\Lecturer\LecturerUpdateDto.cs" />
+    <Compile Include="Dtos\Student\StudentAddDto.cs" />
+    <Compile Include="Dtos\Student\StudentDto.cs" />
+    <Compile Include="Dtos\Student\StudentSearchDto.cs" />
+    <Compile Include="Dtos\Student\StudentUpdateDto.cs" />
+    <Compile Include="Dtos\User\UserDisplayDto.cs" />
+    <Compile Include="Dtos\User\UserRegisterDto.cs" />
     <Compile Include="Models\Course.cs">
       <DependentUpon>LMSModel.tt</DependentUpon>
     </Compile>

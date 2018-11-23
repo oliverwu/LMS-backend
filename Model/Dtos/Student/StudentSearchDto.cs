@@ -12,6 +12,6 @@ namespace Model.Dtos
         public int PageSize { get; set; }
         public int PageNumber { get; set; }
         public int TotalPage { get; set; }
-
+        public int Amount { get; set; }
     }
 }

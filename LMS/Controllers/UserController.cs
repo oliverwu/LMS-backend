@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL.Managers.Interfaces;
+using Model.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,33 +9,25 @@ using System.Web.Http;
 
 namespace LMS.Controllers
 {
+    [Authorize]
     public class UserController : ApiController
     {
-        // GET: api/User
-        public IEnumerable<string> Get()
+        private readonly IUserManager _userManager;
+
+        public UserController(IUserManager userManager)
         {
-            return new string[] { "value1", "value2" };
+            _userManager = userManager;
         }
 
-        // GET: api/User/5
-        public string Get(int id)
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("api/test/createuser")]
+        public IHttpActionResult Post(UserRegisterDto user)
         {
-            return "value";
+            var userDisplay = _userManager.CreateUser(user);
+            return Ok(userDisplay);
         }
 
-        // POST: api/User
-        public void Post([FromBody]string value)
-        {
-        }
 
-        // PUT: api/User/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/User/5
-        public void Delete(int id)
-        {
-        }
     }
 }

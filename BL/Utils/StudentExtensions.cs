@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BL.Utils
 {
-    public static class Extensions
+    public static class StudentExtensions
     {
         public static IEnumerable<Student> Search(this IEnumerable<Student> students, string value)
         {

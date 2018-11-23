@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Model.Dtos.Lecturer
 {
-    class LecturerDto
+    public class LecturerDto
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string StaffNumber { get; set; }
+        public string Email { get; set; }
+        public string Bibliography { get; set; }
     }
 }

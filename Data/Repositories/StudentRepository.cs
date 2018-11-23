@@ -16,9 +16,9 @@ namespace Data.Repositories
 
         }
 
-        public Student GetStudentByEmail(string email)
-        {
-            return _context.Students.FirstOrDefault(x => x.Email == email);
-        }
+        //public Student GetStudentByEmail(string email)
+        //{
+        //    return _context.Students.FirstOrDefault(x => x.Email == email);
+        //}
     }
 }

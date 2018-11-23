@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace LMS.Controllers
 {
+    [Authorize]
     public class CoursesController : ApiController
     {
         private ICourseManager _courseManager;
@@ -35,6 +36,13 @@ namespace LMS.Controllers
         public IHttpActionResult SearchCoursesByName(string name)
         {
             return Ok(_courseManager.SearchCoursesByName(name));
+        }
+
+        [HttpGet]
+        [Route("api/Courses")]
+        public IHttpActionResult GetAllCourses()
+        {
+            return Ok(_courseManager.SearchCoursesByName(""));
         }
 
 
